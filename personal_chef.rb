@@ -57,7 +57,15 @@ class PersonalChef
     puts "Times up!"
     return self
   end
+  def gameplan(meals)
+    meals.each do |meal|
+      puts "We'll have #{meal}..."
+  end
 
+    all_meals = meals.join(", ")
+    puts "In summary: #{all_meals}"
+    return self
+  end
 end  
 
 class Butler
