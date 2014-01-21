@@ -2,7 +2,11 @@ require 'Date'
 
 class PersonalChef
   def make_toast(color)
-    puts "Making your #{color} toast!"
+    if color.nil?
+      puts"How am I supposed to make nothingness toast?"
+    else
+      puts "Making you #{number} of #{color} toast!"
+    end
     return self
   end   
 
@@ -42,8 +46,18 @@ class PersonalChef
       else minutes == 8
         puts "The water is Hot! Hot! Hot!"
       end
-      return self
+    return self
+  end
+  def countdown(counter)
+    while counter > 0
+      puts "The counter is #{counter}"
+      counter = counter - 1
+      sleep 1
     end
+    puts "Times up!"
+    return self
+  end
+
 end  
 
 class Butler
