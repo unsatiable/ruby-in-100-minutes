@@ -26,6 +26,24 @@ class PersonalChef
     weekday = today.strftime("%A")
     puts "Happy #{weekday}! It's the #{day_of_the_year} of #{year}"
   end
+
+  def inventory
+    fruit = {apples: 3, oranges: 1, kiwis: 12}
+    fruit.each do |item, quantity|
+      puts "There are #{quantity} #{item} in the fridge."  
+    end
+    return self
+  end
+  def water_status(minutes)
+      if minutes < 7
+        puts "The water is not boiling yet."
+      elsif minutes == 7
+        puts "The water is just barely boiling"
+      else minutes == 8
+        puts "The water is Hot! Hot! Hot!"
+      end
+      return self
+    end
 end  
 
 class Butler
